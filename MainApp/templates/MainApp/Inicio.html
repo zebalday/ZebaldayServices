@@ -1,0 +1,66 @@
+{% extends 'layouts/Layout.html'%}
+{% load static%}
+
+{% block Title %}Inicio{% endblock Title %}
+
+{% block Style %}
+<link rel="stylesheet" href="{% static 'Styles/IndexStyle.css' %}">
+{% endblock Style %}
+
+{% block Content %}
+
+<h1 class="title"><em>{ {{Title}} }</em></h1>
+
+<div class="description">
+    <p>
+        He creado este simple sitio web con la intención de proporcionar servicios multimedia
+        útiles para mi y otras personas. Hasta el momento sólo he añadido 2 servicios: Generar
+        códigos QR a partir de data ingresada, y descargar videos de Youtube a partir de una url
+        válida. A continuación se explica resumidamente en qué consiste cada uno de los módulos utilizados.
+    </p>
+</div>
+
+<div class="modules">
+    <div class="module-item">
+        <div class="module-thumbnail">
+            <img src="{% static 'Images/Monaqr.PNG' %}" alt="Monalisa QR" />
+        </div>
+        <div class="module-info">
+            <div class="title"><h2>QRcode</h2></div>
+            <div class="content">
+                <p>
+                    Un código de respuesta rápida (Quick Responde Code) es un código pictográfico bidimensional que se 
+                    utiliza por su rápida legibilidad y su capacidad de almacenamiento comparativamente grande. 
+                    El código consta de módulos negros dispuestos en un patrón cuadrado sobre un fondo blanco. 
+                    La información codificada puede estar compuesta por cualquier tipo de datos (por ejemplo, 
+                    símbolos binarios, alfanuméricos o Kanji).
+                    </br></br>
+                    <a href="https://pypi.org/project/qrcode/">Revisa la documentación aquí.</a>
+                </p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="module-item">
+        <div class="module-info">
+            <div class="title"><h2>PyTube</h2></div>
+            <div class="content">
+                <p>
+                    Pytube es una biblioteca Python genuina, liviana y libre de dependencias (y una utilidad de línea de 
+                    comandos) para descargar videos de YouTube. pytube es una biblioteca ligera escrita en Python. 
+                    No tiene dependencias de terceros y pretende ser altamente confiable.
+                    Pytube también facilita la canalización, lo que le permite especificar funciones de devolución de llamada 
+                    para diferentes eventos de descarga, como en progreso o completo.
+                    Además, pytube incluye una utilidad de línea de comandos que le permite descargar videos directamente desde la terminal.
+                    </br></br>
+                    <a href="https://pytube.io/en/latest/user/install.html">Revisa la documentación aquí.</a>
+                </p>
+            </div>
+        </div>
+        <div class="module-thumbnail">
+            <img src="{% static 'Images/Pytube.PNG'%}" alt="" />
+        </div>
+    </div>
+</div>
+
+{% endblock Content %}

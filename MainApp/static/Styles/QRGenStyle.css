@@ -1,0 +1,155 @@
+/* ESTILO DEL TITULO --> Compartido */
+#content > .title{
+    color: #62a8e9;
+    font-size: 40px;
+    padding:20px;
+    text-align:center;
+}
+
+/* FORMULARIO QR GENERATOR */
+form > .qr-form{
+    margin: 0 auto;
+    margin-top:25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #62a8e9;
+    border-radius: 15px;
+    width: 500px;
+    height: auto;
+    -webkit-box-shadow: 2px 3px 10px 0px #2d234266; 
+    box-shadow: 2px 3px 10px 0px #2d234266;
+}
+
+
+/* CSS DEL TEXTBOX */
+
+form > .qr-form > label{
+  font-size: 18px;
+  font-weight: 200;
+}
+
+form > .qr-form > .qr-data{
+    width: 260px;
+    height: 25px;
+    border: 1px solid #62a8e9;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* CSS DEL BOTON */
+form > .qr-form > .generar-qr {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: #2d234266 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 35px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+form > .qr-form > .generar-qr:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+form > .qr-form > .generar-qr:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+form > .qr-form > .generar-qr:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* IMAGEN CÓDIGO QR */
+.qr-image{
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  min-height: 500px;
+  width:400px;
+  border: 1px solid rgba(255,255,255,1);
+  border-radius: 20px;
+  background: rgb(255,255,255);
+  background: linear-gradient(4deg, rgba(255,255,255,1) 0%, rgba(167,212,255,1) 64%, rgba(18,94,166,1) 100%);
+  transition: 0.7s;
+}
+
+.qr-image:hover{
+  transform: scale(1.04);
+}
+
+
+.qr-image > img {
+  display: block;
+  margin: 0 auto;
+  width: 380px;
+  height: 380px;
+  padding: 10px 10px 5px 10px;
+  border-radius: 55px;
+}
+
+.qr-image > .brand-zebalday{
+  font-size: 12px;
+  text-align: center;
+  color: grey;
+  font-weight: 600;
+}
+
+
+/* ESTILOS DEL BOTON DESCARGAR */
+.qr-image > button {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.qr-image > button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.qr-image > button > a{
+  color: rgb(18, 41, 6);
+  font-family: Roboto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}

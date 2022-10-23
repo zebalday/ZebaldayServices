@@ -1,0 +1,31 @@
+{% extends 'layouts/Layout.html'%}
+{% load static%}
+
+{% block Title %}QR Generator{% endblock Title %}
+
+{% block Style %}
+<link rel="stylesheet" href="{% static 'Styles/QRGenStyle.css' %}">
+{% endblock Style %}
+
+{% block Content %}
+
+    <h1 class="title"><em>{ {{Title}} }</em></h1>
+
+    <form action="{% url 'QRGenImg' %}" method="GET">
+        {% csrf_token %}
+        <div class="qr-form">
+            <label for="qr-data">Ingrese data: </label>
+            <input type="text" name="Data" class="qr-data" required>
+            <input type="submit" value="Generar" class="generar-qr">
+        </div>
+    </form>
+
+    {% if Image %}
+        <div class="qr-image">
+            <img src="{{Image}}">
+            <p class="brand-zebalday"><em>QR Generator por @Zebalday_ | @help.programming</em></p>
+            <button><a href="{{Image}}" download="QRCode">Descargar!</a></button>
+        </div>
+    {% endif %}
+    
+{% endblock Content %}

@@ -1,0 +1,45 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="{% static 'Images/ZebaldayServicesIcon.ico' %}">
+        <title> {% block Title %}{% endblock Title %} | @Zervices</title>
+        <link rel="stylesheet" href="{% static 'Styles/LayoutStyle.css' %}">
+        {% block Style %}
+        <!-- Estilo específico de las páginas -->
+        {% endblock Style %}
+    </head>
+
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'Images/ZebaldayBanner.png'%}">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'Inicio' %}">Inicio</a></li>
+            <li><a href="{% url 'QRGen' %}">Generador QR</a></li>
+            <li><a href="{% url 'YTDownloader' %}">YT Downloader</a></li>
+        </ul>
+    </nav>
+
+    <body>
+
+        <div id="content-container">
+            <div id="content">
+                {% block Content %}
+                <!-- Contenido de templates-->
+                {% endblock Content %}
+            </div>
+        </div>
+        
+        <script src="" async defer></script>
+        <footer> 
+            ZebaldayServices by <a href="https://github.com/zebalday">@zebalday_</a>  | Made with Django 
+        </footer>
+        
+    </body>
+
+</html>

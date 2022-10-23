@@ -1,0 +1,214 @@
+/* ESTILO DEL TITULO --> Compartido */
+#content > .title{
+    color: #62a8e9;
+    font-size: 40px;
+    padding:20px;
+    text-align:center;
+}
+
+/* FORMULARIO QR GENERATOR */
+form > .yt-form{
+    margin: 0 auto;
+    margin-top:25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #62a8e9;
+    border-radius: 15px;
+    width: 650px;
+    height: auto;
+    -webkit-box-shadow: 2px 3px 10px 0px #2d234266; 
+    box-shadow: 2px 3px 10px 0px #2d234266;
+}
+
+
+/* CSS DEL TEXTBOX */
+
+form > .yt-form > label{
+  font-size: 18px;
+  font-weight: 200;
+}
+
+form > .yt-form > .yt-link{
+    width: 300px;
+    height: 25px;
+    border: 1px solid #62a8e9;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* CSS DEL BOTON */
+form > .yt-form > .get-streams {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: #2d234266 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 35px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+form > .yt-form > .get-streams:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+form > .yt-form > .get-streams:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+form > .yt-form > .get-streams:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* CSS DE LA INFORMACIÓN DEL VIDEO */
+.video-info-contanier{
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 550px;
+  min-height: 500px;
+  border: 1px solid rgba(255,255,255,1);
+  border-radius: 20px;
+  background: rgb(255,255,255);
+  background: linear-gradient(4deg, rgba(255,255,255,1) 0%, rgba(167,212,255,1) 64%, rgba(18,94,166,1) 100%);
+  transition: 0.7s;
+}
+
+.video-info-contanier:hover{
+  transform: scale(1.04);
+}
+
+.video-info-contanier > .video-title{
+  text-align: center;
+  color: whitesmoke;
+  margin: 0 auto;
+  padding: 10px 10px 0px 10px;
+}
+
+.video-info-contanier > .video-info{
+  text-align: center;
+  color: whitesmoke;
+  font-size: large;
+}
+
+.video-info-contanier > .video-thumbnail{
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 260px;
+  height: 200px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 5px 22px -2px #000000; 
+  box-shadow: 0px 5px 22px -2px #000000;
+}
+
+/* ESTILO DE LOS MENSAJES DE ERROR Y DESCARGA COMPLETA */
+
+.error-msg{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 40px;
+  width: 400px;
+  height: 100px;
+  color: whitesmoke;
+  border: 1px rgb(255, 240, 71) solid;
+  border-radius: 20px;
+  background: rgb(219,11,11);
+  background: linear-gradient(180deg, rgba(219,11,11,1) 35%, rgba(255,142,142,1) 100%);
+  -webkit-box-shadow: 0px 8px 14px -10px #000000; 
+  box-shadow: 0px 8px 14px -10px #000000;
+  text-align: center;
+}
+
+.downloaded-msg{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 40px;
+  width: 400px;
+  height: 100px;
+  color: whitesmoke;
+  border: 1px rgb(114, 229, 68) solid;
+  border-radius: 20px;
+  background: rgb(219,11,11);
+  background: linear-gradient(180deg, rgba(219,11,11,1) 35%, rgba(255,142,142,1) 100%);
+  -webkit-box-shadow: 0px 8px 14px -10px #000000; 
+  box-shadow: 0px 8px 14px -10px #000000;
+}
+/* --------------------------------------------------- */
+
+.video-info-contanier > .streams-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 5px;
+  width: 90%;
+}
+
+
+.video-info-contanier > .streams-container > .links{
+  font-size: x-large;
+  color: rgb(29, 176, 24);
+  }
+
+.video-info-contanier > .streams-container > form > .stream{
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  color: whitesmoke;
+  width: 350px;
+  height: 25px;
+  padding: 5px;
+  border: 1px rgb(230, 230, 230) solid;
+  border-radius: 10px;
+  background: rgb(219,11,11);
+  background: linear-gradient(180deg, rgba(219,11,11,1) 35%, rgba(255,142,142,1) 100%);
+  -webkit-box-shadow: 0px 8px 14px -10px #000000; 
+  box-shadow: 0px 8px 14px -10px #000000;
+}
+
+.video-info-contanier > .streams-container > form > .stream:hover{
+  box-shadow: rgba(252, 129, 98, 0.404) 0 -25px 18px -14px inset,rgba(252, 129, 98, 0.404) 0 1px 2px,rgba(252, 129, 98, 0.404) 0 2px 4px,rgba(252, 129, 98, 0.404) 0 4px 8px,rgba(252, 129, 98, 0.404) 0 8px 16px,rgba(252, 129, 98, 0.404) 0 16px 32px;
+  transform: scale(1.05) rotate(-0.5deg);
+  color: yellowgreen;
+}
+
+.video-info-contanier > .streams-container > .stream > a{
+  color: white;
+}

@@ -1,0 +1,74 @@
+{% extends 'layouts/Layout.html'%}
+{% load static%}
+
+{% block Title %}YT Downloader{% endblock Title %}
+
+{% block Style %}
+<link rel="stylesheet" href="{% static 'Styles/YTDownloaderStyle.css' %}">
+{% endblock Style %}
+
+{% block Content %}
+
+    <h1 class="title"><em>{ {{Title}} }</em></h1>
+
+    <!-- Youtube link formulary -->
+    <form action="{% url 'YTgetStreams' %}" method="GET">
+        {% csrf_token %}
+        <div class="yt-form">
+            <label for="yt-link">Ingrese link de youtube: </label>
+            <input type="text" name="Link" class="yt-link" required>
+            <input type="submit" value="Generar" class="get-streams">
+        </div>
+    </form>
+
+    <!-- Handlig pytube errors -->
+    {% if Error %}
+        <div class="error-msg">
+            <h1>Error</h1>
+        </div>
+    {% endif %}
+
+
+    <!-- Showing Youtube video information -->
+    {% if Video %}
+        <div class="video-info-contanier">
+
+            <h2 class="video-title">{{ Video.Title }}</h2>
+            <p class="video-info">Duración: {{Video.Length}} | Visitas: {{Video.Views}}</p>
+            <img class="video-thumbnail" src="{{ Video.Thumbnail }}" alt="Miniatura video">
+
+            <!-- Showing Youtube video streams for download-->
+            {% if Streams %}
+                <div class="streams-container">
+
+                    <h2 class="links">Enlaces de descarga:</h2>
+
+                    {% for Stream in Streams %}
+                        <form action="{% url 'DownloadVideo' %}" method="POST">
+                            {% csrf_token %}
+                            <input name="video-link" type="hidden" value="{{Video.Link}}" />
+                            <input name="stream-id" type="hidden" value="{{Stream.ID}}" />
+                            <button class="stream" type="submit"> Resolución: {{Stream.Resolution}}  - Tamaño: {{Stream.Size}} Mb </button>
+                        </form>
+                    {% endfor %}
+
+                </div>
+            {% endif %}
+
+        </div>
+    {% endif %}
+
+    <!-- Showing download final screen and opening the folder. -->
+    {% if Donwloaded %}
+        <div class="downloaded-msg">
+            <h1>Video descargado</h1>
+        </div>
+    {% endif %}
+
+
+    
+
+    
+
+
+{% endblock Content %}
